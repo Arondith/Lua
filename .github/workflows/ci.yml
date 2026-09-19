@@ -1,0 +1,32 @@
+name: Lua CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Lua 5.4
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lua5.4
+
+      - name: Show Lua version
+        run: lua5.4 -v
+
+      - name: Run unit tests
+        run: lua5.4 tests/run.lua
+
+      - name: Run sample analysis
+        run: lua5.4 main.lua analyze sample/app.log --format json
