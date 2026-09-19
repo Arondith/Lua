@@ -1,0 +1,8 @@
+2026-09-19T02:00:01Z level=INFO method=GET path=/health status=200 latency_ms=18 service=api
+2026-09-19T02:00:04Z level=INFO method=GET path=/api/users status=200 latency_ms=143 service=api
+2026-09-19T02:00:06Z level=WARN method=POST path=/api/orders status=429 latency_ms=91 service=api
+2026-09-19T02:00:08Z level=ERROR method=POST path=/api/orders status=500 latency_ms=1280 service=api
+2026-09-19T02:00:10Z level=ERROR method=POST path=/api/orders status=503 latency_ms=1675 service=api
+2026-09-19T02:00:12Z level=INFO method=GET path=/api/users status=200 latency_ms=102 service=api
+2026-09-19T02:00:15Z level=INFO method=GET path=/health status=200 latency_ms=15 service=api
+2026-09-19T02:00:18Z level=INFO method=GET path=/api/products status=200 latency_ms=258 service=api
